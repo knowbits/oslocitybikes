@@ -15,7 +15,7 @@ RUN apk update
 
 # Install the extra packages we need.
 # OPTION "--no-cache": avoid caching the index locally, to keep containers small.
-RUN apk add --no-cache tzdata bash curl jq
+RUN apk add --no-cache tzdata bash join column curl jq
 
 # WORKDIR: Setting the working directory to "/app".
 #  1) Affects all subsequent commands in this Dockerfile (CMD, COPY etc),
