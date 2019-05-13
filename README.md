@@ -46,8 +46,7 @@ If any of the above steps to get a bash terminal fail - or you would rather pref
 
 If you run bash on Windows, Mac or Linux you need to make sure that the the following Linux packages gets installed, since these command line tools are used in our bash script.
 
-* [join](https://linux.die.net/man/1/join) - join lines of two files on a common field. 
-* [column](https://linux.die.net/man/1/column) - a utility to "columnate" lists. 
+* [coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html) - contains "join" and other useful utilities. 
 * [jq](https://stedolan.github.io/jq/manual) - a lightweight command-line JSON processor. 
 * [curl](https://github.com/curl/curl) - a command-line tool for transferring data specified with URL syntax.
 
