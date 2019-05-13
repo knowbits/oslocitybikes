@@ -62,18 +62,14 @@ Once you have a *bash terminal* available on your host machine, then download th
 ## Usage
 
 1. Start a *bash terminal*:
-
    * If you run *bash* on your *local host*: start bash in *SCRIPT_FOLDER* 
      (the folder where you downloaded [citybikestatus.sh](./citybikestatus.sh)).
    * Alternatively, if you have chosen to use the *Docker image* (see build instructions above), then type `docker run --rm -it image_citybikes` to get a *bash terminal* that runs in a separate Docker container. 
 
 2. Run the script by typing`./citybikestatus.sh`
-
-  This will print the current *availability status* as a list of "stations, available bikes and available docks" to the terminal window (STDOUT).
-
-  <u>Note</u>: the output is a "pretty printed" list of 3 columns; *"STATIONS   #BIKES    #DOCKS"*.
-
-  <u>Note</u>: to save the script output (STDOUT) to a file then type ```./citybikestatus.sh > result.txt```
+   * This will print the current *availability status* as a list of "stations, available bikes and available docks" to the terminal window (STDOUT).
+   * <u>Note</u>: the output is a "pretty printed" list of 3 columns; *"STATIONS   #BIKES    #DOCKS"*.
+   * <u>Note</u>: to save the script output (STDOUT) to a file then type ```./citybikestatus.sh > result.txt```
 
 ### Notes
 * The bash script creates a set of *intermediate files* during execution. 
