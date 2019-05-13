@@ -113,9 +113,20 @@ sort -t$'\t' -k1,1 < "$FILE_3b_STATION_NAME_AND_AVAILABILITY_TSV" \
 #
 # NOTE: The "-s" option to the "column" command specifies column delimitter character.
 
-(printf "STATION NAME\t#BIKES\t#DOCKS\n"; \
-  cat "$FILE_3c_STATION_NAME_AND_AVAILABILITY_TSV_SORTED") \
-  | column -s$'\t' -t > "$FILE_4a_STATION_NAME_AND_AVAILABILITY_PRETTY_PRINTED"
+# NOT USED: could not find "column" util for "Alpine Linux" (used by Docker).
+# 
+#(printf "STATION NAME\t#BIKES\t#DOCKS\n"; \
+#  cat "$FILE_3c_STATION_NAME_AND_AVAILABILITY_TSV_SORTED") \
+#  | column -s$'\t' -t > "$FILE_4a_STATION_NAME_AND_AVAILABILITY_PRETTY_PRINTED"
+
+# Print the header line
+echo "STATION NAME                    #BIKES  #DOCKS" \
+  > "$FILE_4a_STATION_NAME_AND_AVAILABILITY_PRETTY_PRINTED"
+
+# "Pretty print" each line into 3 columns
+cat "$FILE_3c_STATION_NAME_AND_AVAILABILITY_TSV_SORTED" \
+  | awk 'BEGIN {FS="\t"}; {printf "%-30s\t%.2d\t%2.2d\n", substr($1, 0, 30), $2, $3}' \
+  >> "$FILE_4a_STATION_NAME_AND_AVAILABILITY_PRETTY_PRINTED"
 
 # Print the "pretty printed" result to STDOUT
 cat "$FILE_4a_STATION_NAME_AND_AVAILABILITY_PRETTY_PRINTED"
