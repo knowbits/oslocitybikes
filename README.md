@@ -53,7 +53,7 @@ If you run bash on Windows, Mac or Linux you need to make sure that the the foll
 
 On Linux you typically install a package using a command like `sudo apt-get install <package name>`. See further documentation of *apt-get* [here](https://www.computerhope.com/unix/apt-get.htm).
 
-<u>Note</u>: the *Docker image* comes with the *jq* and *curl* packages pre-installed. 
+<u>Note</u>: the *Docker image* comes with alle of these packages pre-installed. 
 
 ## Install the application ([citybikestatus.sh](./citybikestatus.sh))
 
