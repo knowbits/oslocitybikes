@@ -42,10 +42,12 @@ If any of the above steps to get a bash terminal fail - or you would rather pref
    <u>Note</u>: The "--rm" option ensures automatic deletion of the container when you exit it. 
               PS! Type `exit` in the bash terminal to exit the container.
 
-## Prerequisite 2: install *jq* and *curl* packages
+## Prerequisite 2: install *join*, *column*, *jq* and *curl* packages
 
 If you run bash on Windows, Mac or Linux you need to make sure that the the following Linux packages gets installed, since these command line tools are used in our bash script.
 
+* [join](https://linux.die.net/man/1/join) - join lines of two files on a common field. 
+* [column](https://linux.die.net/man/1/column) - a utility to "columnate" lists. 
 * [jq](https://stedolan.github.io/jq/manual) - a lightweight command-line JSON processor. 
 * [curl](https://github.com/curl/curl) - a command-line tool for transferring data specified with URL syntax.
 
